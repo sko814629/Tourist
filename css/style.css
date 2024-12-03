@@ -35,13 +35,28 @@
             display: flex;
             justify-content: space-between;
             position: fixed;
-            left: 0;
-            top: 0;
+            /* left: 0;
+            top: 0; */
             /* background-color: #666; */
             width: 100%;
             padding-block: 30px;
-            padding-inline: 40px;
+            /* padding-inline: 40px; */
+            max-width: 1470px;
         }
+        /* .scroll-header {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: #fff;
+            transition: display 0.3s ease-in-out;
+        }
+        
+        .scroll-header.show {
+            display: block;
+        } */
         
         .navbar ul {
             display: flex;
@@ -93,9 +108,18 @@
             top: 0;
             width: 100%;
             z-index: -1;
+        }
+        
+        .hero-banner {
             display: flex;
-            align-items: center;
-            justify-content: left;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            height: 100vh;
+        }
+        
+        .hero-banner img {
+            width: 150px;
         }
         /* hero */
         
@@ -103,6 +127,8 @@
             font-size: 3.8rem;
             color: #ffffff;
             font-weight: 700;
+            font-family: "Poppins", serif;
+            padding-block: 10px;
         }
         
         .hero-btn {
@@ -244,7 +270,7 @@
             width: calc(20% - 20px);
             text-align: center;
             position: relative;
-            z-index: 9;
+            z-index: 1;
             /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
         }
         
@@ -256,7 +282,7 @@
             position: absolute;
             left: -30px;
             bottom: -30px;
-            z-index: -1;
+            z-index: 0;
             opacity: 0;
         }
         
@@ -266,7 +292,6 @@
         
         .card:hover {
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            background-color: #DF6951;
         }
         
         .card img {
