@@ -14,7 +14,7 @@
 
 
 <body>
-    <header class="header scroll-header">
+    <header class="header ">
         <div class="container">
             <nav class="navbar">
 
@@ -42,7 +42,44 @@
                     <li><a href="#" class="btn">contact us</a></li>
                 </ul>
 
+
             </nav>
+            <nav class=" mobile-navbar" id="mobile-navbar">
+                
+               
+                <div class="menu-bar-icon">
+                    <a href="#"> <img src="./img/logo (2).png" alt="logo"></a>
+                    <i class="fa-solid fa-bars menu-btn" ></i>
+                </div>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Serives <i class="fa-solid fa-caret-down"></i></a>
+                        <ul class="submenu">
+                            <li>
+                                <a href="#">Honeymoon Packages</a>
+                            </li>
+                            <li>
+                                <a href="#">Tours Packages</a>
+                            </li>
+                            <li>
+                                <a href="#">Musical Events</a>
+                            </li>
+                            <li>
+                                <a href="#">Build Package</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Upcoming package</a></li>
+                    <li><a href="#" class="btn">contact us</a></li>
+                </ul>
+
+<div class="menu-bar-icon">
+    <i class="fa-solid fa-bars"></i>
+</div>
+            </nav>
+
+
         </div>
     </header>
 
@@ -393,19 +430,38 @@
             // jQuery methods go here...
 
         });
-        // // Select the header element
-        // const header = document.querySelector('.header');
 
-        // // Add an event listener to track scroll
-        // window.addEventListener('scroll', () => {
-        //     if (window.scrollY > 0) {
-        //         // Add 'show' class if scrolled down 50px
-        //         header.classList.add('show');
-        //     } else {
-        //         // Remove 'show' class if scrolled back to top
-        //         header.classList.remove('show');
-        //     }
-        // });
+        $(".menu-btn").click(() => {
+    $('#mobile-navbar').toggleClass('show');
+});
+        // // Select the header element
+        const header = document.querySelector('.header');
+
+        // Add an event listener to track scroll
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 0) {
+                // Add 'show' class if scrolled down 50px
+                header.classList.add('show');
+            } else {
+                // Remove 'show' class if scrolled back to top
+                header.classList.remove('show');
+            }
+        });
+//         $(window).scroll(() => {
+//     // Get the scroll position
+//     const scrollPosition = $(window).scrollTop();
+    
+//     // Get the actual height of the header
+//     const headerHeight = $('#header').height();
+    
+//     // Add or remove the 'scrolled' class based on the scroll position
+//     if (scrollPosition > headerHeight) {
+//         $('#header').addClass('scrolled');
+//     } else {
+//         $('#header').removeClass('scrolled');
+//     }
+// });
+
     </script>
 </body>
 
